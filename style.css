@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}  
+  body {
+    background-color: rgb(14, 36, 65);
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;   
+    color: bisque; 
+  }  
+  /* Style the header */
+  .header {
+    display: flex; 
+    flex-direction: row-reverse;  
+    justify-content: space-between;
+    align-self: center;    
+    padding: 10px 40px;
+    background-color: #03061b;
+  }
+  /* .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  } */
+  h5 {
+    margin: 0px;
+  }
+  .head {
+    display: flex;
+    margin: 0px;
+    font-size: 35px;       
+  }
+  .bar {
+    display: flex;
+    height: auto;
+    /* background-color: bisque; */
+  }
+  .input {
+    background-color: bisque;
+    font-size: 16px;
+    height: 35px;
+    width: 200px;
+  }
+  .sub {
+    cursor: pointer;
+    background-color: bisque;
+  }
+  .ul {
+    margin: 0px;
+    padding: 0px;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    -webkit-flex: 1;
+    -ms-flex: 1;  
+    flex: 1; 
+    margin: 2px 0 2px 0;
+    padding: 12px 8px 12px 40px;
+    border: solid black 1px;
+    list-style-type: none;
+    transition: 0.2s;
+  }  
+  li:nth-child(odd) {
+    background-color: rgb(61, 84, 107);
+  }
+  li:hover {
+    background: rgb(56, 118, 180);
+  }
+  ul li.checked {
+    background: rgb(56, 68, 80);
+    color: bisque;
+    text-decoration: line-through;
+  }
+  ul li.checked::before {
+    content: '';
+    display: flex;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    left: 16px; 
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+  .close {
+    /* display: flex; */
+    background-color: blueviolet;
+    /* justify-content: flex-end; */
+    padding: 5px 5px;
+  }
+  .close:hover {
+    /* display: flex; */
+    /* justify-content: flex-end;  */
+    background-color: red;
+    text-decoration: none;
+    /* height: 35px; */
+    /* width: 5px; */
+    /* color: green; */
+  }
+  /* Style the footer */
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+  @media (min-width: 900px) {
+    .header {
+      padding: 10px 250px;
+    }
+    li {
+      padding: 12px 8px 12px 250px;
+    }
+  }
+  @media (max-width: 400px) {
+    .header {
+      padding: 20px 40px;
+    }
+    .head {
+      font-size: 13px;
+    }
+    .input {
+      width: 175px;
+    }
+  }

@@ -1,3 +1,13 @@
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js").then(registration => {
+    console.log("SW Registered!");
+    console.log(registration);
+  }).catch(error => {
+    console.log("SW Registration Failed!");
+    console.log(error);
+  });
+}
+
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -43,13 +53,21 @@ function clicked() {
         var txt = document.createTextNode("\u00D7");
         span.className = "close";
         span.appendChild(txt);
-        li.appendChild(span);
-      
+        li.appendChild(span);      
 
     for (i = 0 ; i < close.length ; i++) {
         close[i].onclick = function() {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
+          var div = this.parentElement;
+            var fadeEffect = setInterval(function () {
+                if (!div.style.opacity) {
+                    div.style.opacity = 1;
+                }
+                if (div.style.opacity > 0) {
+                    div.style.opacity -= 0.1;
+                } else {
+                  div.addEventListener('transitionend', () => div.remove());
+                }
+            }, 150); 
+        }            
     }
 }

@@ -15,12 +15,8 @@
     align-self: center;    
     padding: 10px 40px;
     background-color: #03061b;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  /* .header:after {
-    content: "";
-    display: table;
-    clear: both;
-  } */
   h5 {
     margin: 0px;
   }
@@ -57,10 +53,24 @@
     flex: 1; 
     margin: 2px 0 2px 0;
     padding: 12px 8px 12px 40px;
-    border: solid black 1px;
+    border: solid black;
+    border-width: 0 1px 1px 0 ;
     list-style-type: none;
     transition: 0.2s;
+    animation-duration: 2s;
+    animation-name: slidein;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
   li:nth-child(odd) {
     background-color: rgb(61, 84, 107);
   }
@@ -74,7 +84,7 @@
   }
   ul li.checked::before {
     content: '';
-    display: flex;
+    /* display: flex; */
     border-color: #fff;
     border-style: solid;
     border-width: 0 2px 2px 0;
@@ -83,27 +93,28 @@
     height: 15px;
     width: 7px;
   }
-
   .close {
-    /* display: flex; */
     background-color: blueviolet;
-    /* justify-content: flex-end; */
     padding: 5px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
   }
   .close:hover {
-    /* display: flex; */
-    /* justify-content: flex-end;  */
     background-color: red;
-    text-decoration: none;
-    /* height: 35px; */
-    /* width: 5px; */
-    /* color: green; */
   }
   /* Style the footer */
   .footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #03061b;
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    text-align: center;    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .footsy {
+    text-size-adjust: 1px;
   }
   @media (min-width: 900px) {
     .header {
@@ -122,5 +133,8 @@
     }
     .input {
       width: 175px;
+    }
+    .footer {
+      font-size: 8px;
     }
   }

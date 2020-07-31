@@ -1,0 +1,41 @@
+{
+    "name": "MyDoList",
+    "short_name": "Do the Do",
+    "start_url": "./",
+    "background_color": "rgb(14, 36, 65)",
+    "theme_color": "#03061b",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "images/11763998771586787806-32.png",
+            "sizes": "32x32",
+            "type": "image/svg"
+        },
+        {
+            "src": "images/11763998771586787806-48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "images/11763998771586787806-64.png",
+            "sizes": "64x64",
+            "type": "image/png"           
+        },
+        {
+            "src": "images/11763998771586787806-128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "images/11763998771586787806-256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "images/11763998771586787806-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

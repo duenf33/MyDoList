@@ -2,9 +2,10 @@
     "name": "MyDoList",
     "short_name": "DoTheDo",
     "start_url": "./",
+    "display": "standalone",
     "background_color": "#0e2441",
     "theme_color": "#03061b",
-    "display": "standalone",
+    "orientation": "portrait-primary",
     "icons": [
         {
             "src": "images/list64x64.png",

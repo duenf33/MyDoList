@@ -1,6 +1,6 @@
 {
     "name": "MyDoList",
-    "short_name": "Do the Do",
+    "short_name": "DoTheDo",
     "start_url": "./",
     "background_color": "rgb(14, 36, 65)",
     "theme_color": "#03061b",

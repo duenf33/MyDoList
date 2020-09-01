@@ -69,7 +69,7 @@ function clicked() {
     for (var i = 0 ; i < close.length ; i++) {
         close[i].onclick = function() {
           var div = this.parentElement;
-            var fadeEffect = setInterval(function () {
+            setInterval(function () {
                 if (!div.style.opacity) {
                     div.style.opacity = 1;
                 }

@@ -17,6 +17,8 @@
             <div id="header" class="header">
                 <div id="head" class="head">
                     <h5>MyDoList</h5>
+                    <!-- Either you've done everything already or there are still things to add to your list.
+                    Add you first todo (arrow facing down) -->
                 </div>
                 <div id="bar" class="bar">
                     <input type="text" id="input" class="input" name="List" style="cursor: pointer;">
@@ -37,5 +39,28 @@
         </div>
     </footer>        
         <script type="text/javascript" src="app.js" async defer></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDOl12J1GxcIeE-VMmRdFM24HJZEY1W-kA",
+    authDomain: "mydolist-e68cd.firebaseapp.com",
+    databaseURL: "https://mydolist-e68cd.firebaseio.com",
+    projectId: "mydolist-e68cd",
+    storageBucket: "mydolist-e68cd.appspot.com",
+    messagingSenderId: "346214826886",
+    appId: "1:346214826886:web:40e5c635bb784dc8692207",
+    measurementId: "G-VEGZMQCX1J"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
     </body>    
 </html>

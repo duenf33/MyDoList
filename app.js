@@ -7,7 +7,7 @@ if ("serviceWorker" in navigator) {
     console.log(error);
   });
 }
-
+console.log(firebase);
 // Create a "close" button and append it to each list item
 // var myNodelist = document.getElementsByTagName("LI");
 // var i;

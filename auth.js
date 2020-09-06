@@ -1,5 +1,3 @@
-const auth = firebase.auth();
-
 const whenSignedIn = document.getElementById('whenSignedIn');
 const whenSignedOut = document.getElementById('whenSignedOut');
 

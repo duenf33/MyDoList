@@ -1,23 +1,36 @@
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js").then(registration => {
-    console.log("SW Registered!");
-    console.log(registration);
-  }).catch(error => {
-    console.log("SW Registration Failed!");
-    console.log(error);
-  });
-}
+// if ("serviceWorker" in navigator) {
+//   navigator.serviceWorker.register("sw.js").then(registration => {
+//     console.log("SW Registered!");
+//     console.log(registration);
+//   }).catch(error => {
+//     console.log("SW Registration Failed!");
+//     console.log(error);
+//   });
+// }
 
-// const db =firebase.firestore();
+const db =firebase.firestore();
 
-// let thingsRef;
-// let unsubscribe;
+const sUb = document.getElementById('sub');
+const inPut = document.getElementById('input');
 
-// auth.onAuthStateChanged(user => {
-//   if (user) {
-//     thingsRef = db.collection('MyDoList')
-//   }
-// })
+let thingsRef;
+let unsubscribe;
+
+auth.onAuthStateChanged(user => {
+  if (user) {
+    thingsRef = db.collection('MyDoList');
+    sUb.onclick = () => {
+      const {serverTimestamp} = firebase.firestore.FieldValue;
+
+      thingsRef.add({
+        uid: user.uid,
+        name: appended.productName(),
+        createdAt: serverTimestamp()
+
+      });
+    }  
+  }
+})
 
 // console.log(firebase);
 // Create a "close" button and append it to each list item
@@ -56,7 +69,8 @@ var inp = document.getElementById("input");
 inp.addEventListener("keyup", function(event){
   if (event.keyCode === 13) {
     event.preventDefault();
-    document.getElementById("sub").click();
+    // document.getElementById("sub").click();
+    sUb.click;
   }
 }); 
 
@@ -64,15 +78,15 @@ function clicked() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("input").value;
     var t = document.createTextNode(inputValue);
+    // const appended = document.getElementById("ul").appendChild(li);
+
     li.appendChild(t); 
     if (inputValue === ''){
         alert("Please DO something!");
     } else {
-        const appended = document.getElementById("ul").appendChild(li);
+      appended.appendChild(li);
     }
     document.getElementById("input").value = "";
-
-    console.log('testing testing!!');
 
         var span = document.createElement("SPAN");
         // var txt = document.createTextNode("\u00D7");

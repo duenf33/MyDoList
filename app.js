@@ -7,6 +7,18 @@ if ("serviceWorker" in navigator) {
     console.log(error);
   });
 }
+
+// const db =firebase.firestore();
+
+// let thingsRef;
+// let unsubscribe;
+
+// auth.onAuthStateChanged(user => {
+//   if (user) {
+//     thingsRef = db.collection('MyDoList')
+//   }
+// })
+
 // console.log(firebase);
 // Create a "close" button and append it to each list item
 // var myNodelist = document.getElementsByTagName("LI");
@@ -56,9 +68,11 @@ function clicked() {
     if (inputValue === ''){
         alert("Please DO something!");
     } else {
-        document.getElementById("ul").appendChild(li);
+        const appended = document.getElementById("ul").appendChild(li);
     }
     document.getElementById("input").value = "";
+
+    console.log('testing testing!!');
 
         var span = document.createElement("SPAN");
         // var txt = document.createTextNode("\u00D7");

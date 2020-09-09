@@ -8,29 +8,29 @@
 //   });
 // }
 
-const db =firebase.firestore();
+// const db =firebase.firestore();
 
-const sUb = document.getElementById('sub');
-const inPut = document.getElementById('input');
+// const sUb = document.getElementById('sub');
+// const inPut = document.getElementById('input');
 
-let thingsRef;
-let unsubscribe;
+// let thingsRef;
+// let unsubscribe;
 
-auth.onAuthStateChanged(user => {
-  if (user) {
-    thingsRef = db.collection('MyDoList');
-    sUb.onclick = () => {
-      const {serverTimestamp} = firebase.firestore.FieldValue;
+// auth.onAuthStateChanged(user => {
+//   if (user) {
+//     thingsRef = db.collection('mydolist');
+//     sUb.onclick = () => {
+//       const {serverTimestamp} = firebase.firestore.FieldValue;
 
-      thingsRef.add({
-        uid: user.uid,
-        name: appended.productName(),
-        createdAt: serverTimestamp()
+//       thingsRef.add({
+//         uid: user.uid,
+//         name: inPut.value,
+//         createdAt: serverTimestamp()
 
-      });
-    }  
-  }
-})
+//       });
+//     }  
+//   }
+// })
 
 // console.log(firebase);
 // Create a "close" button and append it to each list item
@@ -69,8 +69,7 @@ var inp = document.getElementById("input");
 inp.addEventListener("keyup", function(event){
   if (event.keyCode === 13) {
     event.preventDefault();
-    // document.getElementById("sub").click();
-    sUb.click;
+    document.getElementById("sub").click();
   }
 }); 
 
@@ -78,13 +77,12 @@ function clicked() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("input").value;
     var t = document.createTextNode(inputValue);
-    // const appended = document.getElementById("ul").appendChild(li);
 
     li.appendChild(t); 
     if (inputValue === ''){
         alert("Please DO something!");
     } else {
-      appended.appendChild(li);
+        document.getElementById("ul").appendChild(li);
     }
     document.getElementById("input").value = "";
 

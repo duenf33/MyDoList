@@ -1,79 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>MyDoList</title>
-        <meta name="description" content="#03061b">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#03061b">        
-        <link rel="stylesheet" href="style.css">
-        <link rel="manifest" href="manifest.json">
-        <link rel="apple-touch-icon" href="images/list64x64.png">
-        
-    </head>
-    <body>
-        <div id="bod" class="bod">
-            <section id="whenSignedOut">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>MyDoList</title>
+		<meta name="description" content="#03061b" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#03061b" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="manifest" href="manifest.json" />
+		<link rel="apple-touch-icon" href="images/list64x64.png" />
+	</head>
+	<body>
+		<div id="bod" class="bod">
+			<!-- <section id="whenSignedOut">
                 <button id="signInBtn">Sign in with Google</button>
             </section>
             <section id="whenSignedIn" hidden="true">
                 <div id="userDetails"></div>
                 <button id="signOutBtn">Sign Out</button>
-            </section>
-            <div id="header" class="header">
-                <div id="head" class="head">
-                    <h5>MyDoList</h5>
-                    <!-- Either you've done everything already or there are still things to add to your list.
+            </section> -->
+			<div id="header" class="header">
+				<div id="head" class="head">
+					<h5>MyDoList</h5>
+					<!-- Either you've done everything already or there are still things to add to your list.
                     Add you first todo (arrow facing down) -->
-                </div>
-                <div id="bar" class="bar">
-                    <input type="text" id="input" class="input" name="List" style="cursor: pointer;">
-                    <input onclick="clicked()" type="submit" value="" id="sub" class="sub">
-                </div>
-            </div>
-            <div id="insub" class="insub">
-                <ul id="ul" class="ul">
-                    <!-- <li>Buy milk</li>
+				</div>
+				<div id="bar" class="bar">
+					<input
+						type="text"
+						id="input"
+						class="input"
+						name="List"
+						style="cursor: pointer"
+					/>
+					<input
+						onclick="clicked()"
+						type="submit"
+						value=""
+						id="sub"
+						class="sub"
+					/>
+				</div>
+			</div>
+			<div id="insub" class="insub">
+				<ul id="ul" class="ul">
+					<!-- <li>Buy milk</li>
                     <li class="checked">take trash out</li>
                     <li>do laundry</li> -->
-                </ul>
-            </div>
-        </div>
-    <footer>
-        <div class="footer" id="footer">
-            <p class="footsy" id="footsy">© Copyright 2020 by Fercho<br>Do the DoList</p>
-        </div>
-    </footer>        
-        <script type="text/javascript" src="app.js" defer></script>
-        <script type="text/javascript" src="auth.js" defer></script>
+				</ul>
+			</div>
+		</div>
+		<footer>
+			<div class="footer" id="footer">
+				<p class="footsy" id="footsy">
+					© Copyright 2021 by Fercho<br />Do the DoList
+				</p>
+			</div>
+		</footer>
+		<script type="text/javascript" src="app.js" defer></script>
+		<script type="text/javascript" src="auth.js" defer></script>
 
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<!-- <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script> -->
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+		<!-- <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script> -->
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDOl12J1GxcIeE-VMmRdFM24HJZEY1W-kA",
-    authDomain: "mydolist-e68cd.firebaseapp.com",
-    databaseURL: "https://mydolist-e68cd.firebaseio.com",
-    projectId: "mydolist-e68cd",
-    storageBucket: "mydolist-e68cd.appspot.com",
-    messagingSenderId: "346214826886",
-    appId: "1:346214826886:web:40e5c635bb784dc8692207",
-    measurementId: "G-VEGZMQCX1J"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  const auth = firebase.auth();
-
-</script>
-    </body>    
+		<!-- <script>
+			comment -> Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyDOl12J1GxcIeE-VMmRdFM24HJZEY1W-kA",
+				authDomain: "mydolist-e68cd.firebaseapp.com",
+				databaseURL: "https://mydolist-e68cd.firebaseio.com",
+				projectId: "mydolist-e68cd",
+				storageBucket: "mydolist-e68cd.appspot.com",
+				messagingSenderId: "346214826886",
+				appId: "1:346214826886:web:40e5c635bb784dc8692207",
+				measurementId: "G-VEGZMQCX1J",
+			};
+			comment -> Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+			const auth = firebase.auth();
+		</script> -->
+	</body>
 </html>
